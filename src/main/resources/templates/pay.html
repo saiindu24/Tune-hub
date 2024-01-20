@@ -70,6 +70,8 @@ function verifyPayment(orderId, paymentId, signature) {
      $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
          .done(function(isValid) {
              if (isValid) {
+            	 alert("Payment sucessful");
+            	 window.location.href='Payment-success';
                  console.log("Payment successful");
              } else {
                  console.log("Payment failed");
