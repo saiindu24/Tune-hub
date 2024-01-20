@@ -72,9 +72,10 @@ function verifyPayment(orderId, paymentId, signature) {
              if (isValid) {
             	 alert("Payment sucessful");
             	 window.location.href='Payment-success';
-                 console.log("Payment successful");
+                
              } else {
-                 console.log("Payment failed");
+            	 alert("Payment Failure");
+            	 window.location.href='Payment-Failure';
              }
          })
          .fail(function(error) {
